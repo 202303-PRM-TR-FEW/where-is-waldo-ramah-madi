@@ -1,16 +1,17 @@
 const example = [
-  ["O", "O", "O", "P"],
-  ["O", "O", "O", "O"],
-  ["O", "O", "O", "O"],
-  ["O", "O", "O", "O"],
-  ["O", "O", "O", "O"],
-  ["O", "O", "O", "O"]
+  ["O", "P"],
+  ["O", "O"],
+  ["O", "O"],
+  ["O", "O"],
+  ["O", "O"],
+  ["O", "O"],
 ];
 
 
 const whereIsWaldo = (matrix) => {
   const initial = matrix[0][0];
-  if(initial !== matrix[0][1] && matrix[0][1] === matrix[0][2]) return [1, 1]
+  if(initial !== matrix[0][1] && matrix[0][1] === matrix[0][2] || 
+    initial !== matrix[0][1] && matrix[0][1] === matrix[1][0]) return [1, 1]
 
   else{
   for (let i = 0; i < matrix.length; i++) {
